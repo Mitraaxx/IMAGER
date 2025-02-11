@@ -14,8 +14,9 @@ const Description = () => {
         <img src={assets.sample_img_1} alt='' className='w-80xl
         w-96  rounded-lg'/>
         <div>
-            <h2>Introducing the AI-Powered Text to Image Generator</h2>
-            <p>AI-powered text-to-image generators are advanced tools that use artificial intelligence to create images from textual descriptions. These systems, powered by deep learning and neural networks, can generate highly detailed and realistic visuals based on simple text prompts. By understanding language and interpreting context, they transform words into creative and unique images, making them valuable for artists, designers, and content creators. Whether for concept art, marketing materials, or imaginative storytelling, AI-generated images offer endless possibilities, bridging the gap between human creativity and machine intelligence.</p>
+            <h2 className='text-3xl font-medium
+            max-w-lg mb-4'>Introducing the AI-Powered Text to Image Generator</h2>
+            <p className='text-gray-600'>AI-powered text-to-image generators are advanced tools that use artificial intelligence to create images from textual descriptions. These systems, powered by deep learning and neural networks, can generate highly detailed and realistic visuals based on simple text prompts. By understanding language and interpreting context, they transform words into creative and unique images, making them valuable for artists, designers, and content creators. Whether for concept art, marketing materials, or imaginative storytelling, AI-generated images offer endless possibilities, bridging the gap between human creativity and machine intelligence.</p>
         </div>
     
     </div>
