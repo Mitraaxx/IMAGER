@@ -7,7 +7,7 @@ const Navbar = () => {
     // this is to check that if the user is logged in or not
     // here null means it is logged out
     // const [user, setUser] = useState(null); [yeh basically aise na use karke hum context file jo banai hai usmai se leke aaege]
-    const {user, setUser} = useContext(AppContext);
+    const {user, setUser,setShowLogin} = useContext(AppContext);
 
     const navigate = useNavigate();
   return (
@@ -54,7 +54,7 @@ const Navbar = () => {
             :
             <div className='flex items-center gap-2 sm:gap-5 text-xs'>
                 <p className='cursor-pointer' onClick={()=>navigate('/buy')}>Pricing</p>
-                <button className='bg-zinc-800 text-white px-7 py-2
+                <button onClick={()=>setShowLogin(true)} className='bg-zinc-800 text-white px-7 py-2
                 sm:px-10 text-sm rounded-full text-xs'>Login</button>
             </div>
             }        
