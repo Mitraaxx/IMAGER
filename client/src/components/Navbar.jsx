@@ -7,7 +7,7 @@ const Navbar = () => {
     // this is to check that if the user is logged in or not
     // here null means it is logged out
     // const [user, setUser] = useState(null); [yeh basically aise na use karke hum context file jo banai hai usmai se leke aaege]
-    const {user, setUser,setShowLogin} = useContext(AppContext);
+    const {user, setUser,setShowLogin, logout, credit} = useContext(AppContext);
 
     const navigate = useNavigate();
   return (
@@ -35,9 +35,9 @@ const Navbar = () => {
                 ' onClick={()=>navigate('/buy')}>
                     <img src ={assets.credit_star} className='w-5' alt=''/>
                     <p className='text-xs sm:text-sm font-small
-                    text-gray-600'>Credits left : 50</p>
+                    text-gray-600'>Credits left : {credit}</p>
                 </button>
-                <p className='text-gray-600 max-sm:hidden pl-4'>Hi, pri</p>
+                <p className='text-gray-600 max-sm:hidden pl-4'>Hi, {user.name}</p>
                 <div className='relative group'>
                     <img src={assets.profile_icon} className='w-10 drop-shadow' 
                     alt='' />
@@ -45,7 +45,7 @@ const Navbar = () => {
                     top-0 right-0 z-10 text-black rounded pt-12'>
                         <ul className='list-none m-0 p-2 bg-white
                         rounded-md border text-sm'>
-                            <li className='py-1 px-2 cursor-pointer
+                            <li onClick={logout} className='py-1 px-2 cursor-pointer
                             pr-10'>Logout</li>
                         </ul>
                     </div>
